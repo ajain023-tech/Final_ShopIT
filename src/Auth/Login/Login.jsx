@@ -36,6 +36,8 @@ const Login = () => {
     if (auth) {
       navigate(redirectTo, { replace: true })
     }
+    // only check once, when the page opens
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const handleSubmit = async (e) => {

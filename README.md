@@ -11,7 +11,7 @@ place an order and see their previous orders.
 | Anushka Jain | Module 1 — App Layout, Navigation & Info Pages |
 | Yug Thakral | Module 2 — Product Browsing |
 | Krishnika Goyal | Module 3 — User Accounts, Server & Price Comparison |
-| Naina | Module 4 — Cart, Wishlist, Orders & Smart Budget |
+| Naina Agarwal | Module 4 — Cart, Wishlist, Orders & Smart Budget |
 
 ## Features
 
@@ -98,8 +98,8 @@ You need **Node.js** (v18 or newer) and **MongoDB** running on `localhost:27017`
 
 ```bash
 # 1. clone
-git clone https://github.com/ajain023-tech/ShopIT.git
-cd ShopIT
+git clone https://github.com/ajain023-tech/Final_ShopIT.git
+cd Final_ShopIT
 
 # 2. backend
 cd backend

@@ -15,7 +15,6 @@ import usePageTitle from '../../Hooks/usePageTitle'
 
 const UpdateDetails = () => {
     usePageTitle('My Account')
-    const [userData, setUserData] = useState([])
     const [openAlert, setOpenAlert] = useState(false);
     const [tab, setTab] = useState(0);
     let authToken = localStorage.getItem('Authorization')
@@ -42,6 +41,8 @@ const UpdateDetails = () => {
     let navigate = useNavigate()
     useEffect(() => {
         setProceed ? getUserData() : navigate('/')
+        // only load once, when the page opens
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     const getUserData = async () => {
         try {
@@ -50,15 +51,16 @@ const UpdateDetails = () => {
                     'Authorization': authToken
                 }
             })
-            userDetails.firstName = data.firstName
-            userDetails.lastName = data.lastName
-            userDetails.email = data.email
-            userDetails.phoneNumber = data.phoneNumber
-            userDetails.address = data.address
-            userDetails.zipCode = data.zipCode
-            userDetails.city = data.city
-            userDetails.userState = data.userState
-            setUserData(data);
+            setUserDetails({
+                firstName: data.firstName || '',
+                lastName: data.lastName || '',
+                email: data.email || '',
+                phoneNumber: data.phoneNumber || '',
+                address: data.address || '',
+                zipCode: data.zipCode || '',
+                city: data.city || '',
+                userState: data.userState || '',
+            })
 
         } catch (error) {
             toast.error("Something went wrong", { autoClose: 500, theme: 'colored' })
@@ -69,7 +71,7 @@ const UpdateDetails = () => {
         setUserDetails({ ...userDetails, [e.target.name]: e.target.value })
     }
 
-    let phoneRegex = /^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$/;
+    let phoneRegex = /^(?:(?:\+|0{0,2})91(\s*[-]\s*)?|[0]?)?[789]\d{9}$/;
     let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     // let zipRegex = /^[1-9]{1}[0-9]{2}\\s{0, 1}[0-9]{3}$/;
 

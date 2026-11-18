@@ -1,18 +1,18 @@
 # ShopIt — Daily Tasks (9 Nov – 15 Nov 2026)
 
 28 small tasks: **one task per person per day** for 7 days.
-Each task is new work. None of these features exist in the project yet.
+Each task added a new feature on top of the base project. All 28 tasks are completed.
 
 | Person | Module | Area |
 |---|---|---|
 | Anushka Jain | Module 1 | Layout, navigation, info pages (frontend only) |
 | Yug Thakral | Module 2 | Product browsing: home, listing, search, product page (frontend only) |
 | Krishnika Goyal | Module 3 | Accounts, server, Price Comparison |
-| Naina | Module 4 | Cart, wishlist, checkout, orders, Smart Budget |
+| Naina Agarwal | Module 4 | Cart, wishlist, checkout, orders, Smart Budget |
 
 ---
 
-## Part A — Read this first (context for you or your AI tool)
+## Part A — Project context
 
 ### Tech stack
 - **Frontend:** React 18 (Create React App), React Router v6, Material UI v5, axios, react-toastify, react-icons. Runs on `http://localhost:3000`.
