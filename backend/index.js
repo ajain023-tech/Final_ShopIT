@@ -31,6 +31,12 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 
 
+// Visiting the API root in a browser sends people to the website
+app.get('/', (req, res) => {
+    if (process.env.FRONTEND_URL_1) return res.redirect(process.env.FRONTEND_URL_1)
+    res.json({ status: 'ShopIT API running' })
+})
+
 app.use(checkOrigin);
 
 app.use('/api/auth', auth)
