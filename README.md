@@ -4,6 +4,10 @@ ShopIt is a simple online shopping website built with the MERN stack (MongoDB, E
 Users can browse products by category, search, view product details, add items to their cart or wishlist,
 place an order and see their previous orders.
 
+**Live website:** https://shopit-store-eight.vercel.app
+
+**Project documents:** [Project report](docs/ShopIt_Agile_Project_Report_Final.docx) · [Seminar presentation](docs/ShopIt_Seminar.pptx)
+
 ## Team
 
 | Member | Module |
