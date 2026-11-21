@@ -43,6 +43,11 @@ app.use('/api/wishlist', wishlist)
 
 app.use('/api/order', order)
 
-app.listen(port, () => {
-    console.log(`E-commerce backend listening at http://localhost:${port}`)
-})
+// Start a server when run directly (local dev); on Vercel the app is exported as a serverless handler
+if (require.main === module) {
+    app.listen(port, () => {
+        console.log(`E-commerce backend listening at http://localhost:${port}`)
+    })
+}
+
+module.exports = app
